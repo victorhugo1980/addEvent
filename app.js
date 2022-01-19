@@ -1,12 +1,12 @@
 function getMousePosition(event) {
     // event.preventDefault();
     console.log(event.clientY, event.clientX);
-    let cuadrado = document.getElementById("cuadrado");
+    let caja = document.getElementById("caja");
 
     if (event.clientY <= 100) {
-        cuadrado.style.top = `0`;
+        caja.style.top = `0`;
     } else {
-        cuadrado.style.top = `calc(${event.clientY}px - 100px)`;
+        caja.style.top = `calc(${event.clientY}px - 100px)`;
     }
 }
 
