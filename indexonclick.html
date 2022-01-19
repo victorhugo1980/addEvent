@@ -17,30 +17,29 @@
         width: 100px;
         height: 100px;
         background-color: red;
+        box-shadow: 0px 10px 10px black;
 
         position: absolute;
         top: 0;
         left: 0;
 
-        transition: top 300ms;
+        transition: top 200ms;
       }
     </style>
   </head>
-  <body onclick="getMousePosition(event)">
+  <body onclick="posicion(event)">
     <div id="cuadrado"></div>
-    <script src="app.js"></script>
   </body>
 </html>
 <script>
-  function getMousePosition(event) {
-    // event.preventDefault();
-    console.log(event.clientY, event.clientX);
+  function posicion(ev) {
+    //console.log(ev.clientY, ev.clientX);
     let cuadrado = document.getElementById("cuadrado");
 
     if (event.clientY <= 100) {
       cuadrado.style.top = `0`;
     } else {
-      cuadrado.style.top = `calc(${event.clientY}px - 100px)`;
+      cuadrado.style.top = `calc(${ev.clientY}px - 100px)`;
     }
   }
 </script>
