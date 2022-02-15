@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   
+    <form action="">
+      <label for="">Ingrese número</label>
+      <input type="text" id="texto" />
+      <button id="enviar">Enviar</button>
+    </form>
+
+    <p id="demo"></p>
+    
+     <script>
+
+   
+      let boton = document.getElementById("enviar");
+       let tex = document.getElementById("texto").value;
+       console.log(tex);
+
+      boton.addEventListener("click", mostrar);
+
+      function mostrar() {
+        let tex = document.getElementById("texto").value;
+        document.getElementById("demo").innerText=tex;
+        console.log(tex);
+      }
+    </script>
+  </body>
+</html>
