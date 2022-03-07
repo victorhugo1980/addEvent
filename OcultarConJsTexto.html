@@ -7,7 +7,6 @@
     <title>Document</title>
   </head>
   <body>
-   
     <form action="">
       <label for="">Ingrese número</label>
       <input type="text" id="texto" />
@@ -15,21 +14,18 @@
     </form>
 
     <p id="demo"></p>
-    
-     <script>
 
-   
+    <script>
       let boton = document.getElementById("enviar");
-       let tex = document.getElementById("texto").value;
-       console.log(tex);
+   /*    let tex = document.getElementById("texto").value;
+      console.log(tex); */
 
-      boton.addEventListener("click", mostrar);
-
-      function mostrar() {
-        let tex = document.getElementById("texto").value;
-        document.getElementById("demo").innerText=tex;
-        console.log(tex);
-      }
+      boton.addEventListener("click", function (event) {
+        event.preventDefault();
+        let texto = document.getElementById("texto").value;
+        document.getElementById("demo").innerHTML = texto;
+        console.log(texto);
+      });
     </script>
   </body>
 </html>
